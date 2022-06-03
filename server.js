@@ -31,8 +31,9 @@ db.once("open", function () {
 });
 
 //Port listen
-app.listen(3001, () => {
-    console.log("Server listening on port 3001");
+const port = process.env.PORT || 8000
+app.listen(port, () => {
+    console.log("Server listening on port " + port);
 })
 
 //Routers
